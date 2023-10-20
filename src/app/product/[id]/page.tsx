@@ -1,3 +1,4 @@
+import DeleteButton from "@/components/DeleteProduct";
 import Price from "@/components/Price";
 import { ProductType } from "@/types/types";
 import Image from "next/image";
@@ -39,6 +40,7 @@ const SingleProductPage = async ({ params }: { params: { id: string } }) => {
         <p>{singleProduct.description}</p>
         <Price product={singleProduct} />
       </div>
+      <DeleteButton id={singleProduct.id} />
     </div>
   );
 };
