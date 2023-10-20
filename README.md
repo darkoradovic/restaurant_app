@@ -22,6 +22,12 @@ Full stack NextJS 13 food delivery app build from scratch using Prisma, MongoDB,
 - PostgeSQL
 - Next auth(Google and Facebook)
 
+## Prisma migration with MongoDB
+
+- npx prisma generate
+- npx prisma db push
+- view local(npx prisma studio)
+
 ## 📌 Links
 
 - [NextJS](https://nextjs.org/)
