@@ -44,4 +44,5 @@ export type MenuType = {
   export type ActionTypes = {
     addToCart:(item:CartItemType)=> void;
     removeFromCart:(item:CartItemType)=> void;
+    resetCart: () => void
   }
