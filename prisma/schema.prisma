@@ -92,4 +92,6 @@ model Order {
   intent_id String?
   user      User     @relation(fields: [userEmail], references: [email])
   userEmail String
+
+  @@unique([intent_id])
 }

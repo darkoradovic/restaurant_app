@@ -51,4 +51,7 @@ const INITIAL_STATE = {
             totalPrice: state.totalPrice - item.price
         }))
     },
+    resetCart: () => {
+        set(INITIAL_STATE)
+      },
   }), {name: "cart", skipHydration: true}))
