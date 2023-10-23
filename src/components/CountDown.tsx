@@ -1,26 +1,44 @@
 // WITH A LIBRARY
-// "use client"
-// import React from 'react'
-// import Countdown from 'react-countdown'
+"use client";
+import React from "react";
+import Countdown from "react-countdown";
 
-// const endingDate = new Date("2023-07-25")
+const endingDate = new Date("2023-012-31");
 
-// const CountDown = () => {
-//   return (
-//     <Countdown className='font-bold text-5xl text-yellow-300' date={endingDate}/>
-//   )
-// }
+const Completionist = () => <span>Timer ended</span>;
 
-// export default CountDown
+const renderer = ({ days, hours, minutes, seconds, completed }: any) => {
+  if (completed) {
+    // Render a completed state
+    return <Completionist />;
+  } else {
+    // Render a countdown
+    return (
+      <span className="font-bold text-5xl text-yellow-300">
+        {days}d:{hours}h:{minutes}m:{seconds}s
+      </span>
+    );
+  }
+};
 
+const CountDown = () => {
+  return (
+    <Countdown
+      className="font-bold text-5xl text-yellow-300"
+      date={endingDate}
+      renderer={renderer}
+    />
+  );
+};
+
+export default CountDown;
 
 // WITHOUT A LIBRARY
-"use client"
+/* "use client";
 import React, { useState, useEffect } from "react";
 
 const CountDown = () => {
-  
-  let difference = +new Date(`10/10/2023`) - +new Date();
+  let difference = +new Date(`31/12/2023`) - +new Date();
   const [delay, setDelay] = useState(difference);
 
   const d = Math.floor(difference / (1000 * 60 * 60 * 24));
@@ -48,4 +66,4 @@ const CountDown = () => {
   );
 };
 
-export default CountDown;
+export default CountDown; */
