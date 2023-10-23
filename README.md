@@ -3,6 +3,7 @@
 ## 📝 Project description
 
 Full stack NextJS 13 food delivery app build from scratch using Prisma, MongoDB, Tailwind CSS, Typescript , Next Auth and a lot more.
+The focus isn't on UI, it is on the functionality and relation between FE and BE
 
 ## 💻 Project Features
 
